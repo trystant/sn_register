@@ -1,0 +1,77 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>track.unixcctv.us - providing tracking information you need!</title>
+	<meta name="generator" content="BBEdit 8.5" />
+	<link rel="stylesheet" type="text/css" href="/asset/include/style.css">
+	<script type="text/javascript" src="/asset/include/overlib.js"><!-- overLIB (c) Erik Bosrup --></script>
+	<script type="text/javascript" language="javascript" src="/asset/include/jscript.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+	function inputpastfivedaystr() {
+		insertfield('searchdate','12/23/2016'+' '+'12/28/2016');
+	}
+</script>
+<div id="overDiv" style="position:absolute; visibility:hidden; z-index:1000;"></div>
+<center>
+<div id="header">
+<table width="100%" cellspacing="0" cellpadding="0"><tr><td height=10 class="copyright">This is beta testing version only. Database is updating every 20 mins starting at 8:30AM CST</td></tr></table>
+<table width="100%" cellspacing="0" cellpadding="10" class="main" style="table-layout:fixed;">
+<tr>
+	<td width="140" class="searchform" height="550">
+		<form name="trackpackage" action="track.asp" method="get">
+		<input type="hidden" id="companytype" value="">
+		<textarea name="invoicenumber" id="invoicenumber" rows="8" style="width:135px"></textarea>
+		<table cellpadding="0" cellspacing="0" width="100%">
+		<tr>
+			<td width="70%" valign="top"><a href="javascript:void(0);" onclick="callinvoicesearch(); ToggleResultWindow('trackinfo');"><b>Search Invoices</b></a><br><a href="javascript:void(0);" onclick="insertfield('invoicenumber','');">Clear</a></td>
+			<td width="30%" align="right" valign="top"><span onMouseOver="return overlib('You can track multiple invoices at the same time. Put a enter between invoice numbers to seperate them. A single invoice number has to be at least 4 digit number', VAUTO, WIDTH, 150, BORDER, 1, FGCOLOR, '#FFFFFF', BGCOLOR, '#3399CC', TEXTCOLOR, '#000000', TEXTFONT, 'Arial',TEXTSIZE,'10px');" onMouseOut="return nd();" style="cursor:pointer">Help</span></td>
+		</tr>
+		</table>
+		<br>
+		<table cellpadding="0" cellsapcing="0" width="100%"><tr><td height="2" bgcolor="#FFFFFF"></td></tr></table><br>
+		Search by company name</br>
+		<input class="text" type="text" name="companyname" id="companyname" style="width:130px"><br>
+		<table cellpadding="2" cellspacing="0" width="100%">
+		<tr>
+			<td width="70%" valign="top">		
+		<input type="radio" id="comtype" name="companytype" value="receiver" checked onclick="document.getElementById('companytype').value='receiver'" >&nbsp;Receiver<br><input type="radio" name="companytype" value="billing" onclick="document.getElementById('companytype').value='billing'">&nbsp;Billing
+		<br>
+		<script>document.getElementById('companytype').value = 'receiver';</script></td>
+		<td width="30%" valign="top" align="right"><a href="javascript:void(0);" onclick="insertfield('companyname','');">Clear</a></td></tr></table><br>
+		Search by UPS Account charged for transportation<br>
+		<input class="text" type="text" name="upsaccount" id="upsaccount" style="width:130px" maxlength="6"><br>
+		<a href="javascript:void(0);" onclick="insertfield('upsaccount','F934Y5');">New York</a> | <a href="javascript:void(0);" onclick="insertfield('upsaccount','R4R306');">Los Angeles</a> | <a href="javascript:void(0);" onclick="insertfield('upsaccount','');">Clear</a>
+		<br>
+		<br>
+		Search by date</br>
+		<input class="text" type="text" name="searchdate" id="searchdate" style="width:130px"><br>
+		<a href="javascript:void(0);" onclick="insertfield('searchdate','12/28/2016');">Today</a> | <a href="javascript:void(0);" onclick="insertfield('searchdate','12/23/2016'+' '+'12/28/2016');">Past 5 Days</a><br><a href="javascript:void(0);" onclick="insertfield('searchdate','12/27/2016');">Last Business Day</a><br><a href="javascript:void(0);" onclick="insertfield('searchdate','');">Clear</a>
+		<br>
+		<br>
+		<table cellpadding="0" cellspacing="0" width="100%"><tr><td align="right"><a href="javascript:void(0);" onclick="validateForm(); ToggleResultWindow('trackinfo');"><b>Search Packages</b></a><br><a href="javascript:void(0);" onclick="insertfield('searchdate','');insertfield('upsaccount','');document.getElementById('companytype').value='receiver';document.getElementById('comtype').checked=true;insertfield('companyname','');insertfield('invoicenumber','');">Clear All</a>
+		</td></tr></table>
+		</form>	
+	</td>
+	<td width="798" class="trackbody">
+	<a href="javascript:void(0);" onClick="ToggleResultWindow('trackinfo');">TRACKING INFO</a> | <a href="javascript:void(0);" onClick="ToggleResultWindow('upswindow');">UPS.COM</a>&nbsp;&nbsp;&nbsp;&nbsp;<img src="/asset/image/3rdparty.gif" width="30" height="20" align="absmiddle">&nbsp;= 3rd Party&nbsp;&nbsp;&nbsp;<img src="/asset/image/calltag.gif" width="30" height="20" align="absmiddle">&nbsp;= Call Tag&nbsp;&nbsp;&nbsp;<img src="/asset/image/codcheck.gif" width="30" height="20" align="absmiddle" alt="COD Check">&nbsp;= COD Check&nbsp;&nbsp;&nbsp;&nbsp;<img src="/asset/image/codcash.gif" width="30" height="20" align="absmiddle" alt="COD Cash">&nbsp;= COD Cash<br>
+	<div id="trackinfo" class="smallmenu"><iframe id="trackbodyframe" frameBorder=0></iframe></div>
+	<div id="upswindow" class="smallmenu"><iframe id="upscom" frameBorder=0></iframe></div>
+	<script type="text/javascript">
+		show("trackinfo");
+		hide("upswindow");
+		//document.getElementById("upscom").src="http://www.ups.com";
+	</script>
+	</td>
+</tr>
+</table>
+<div class="copyright">Script by Phillip Chong</div>
+</div>
+
+</center>
+</body>
+</html>

@@ -1,0 +1,22 @@
+body{
+    background-color: #E8E4CD;
+}
+
+textarea {
+    width: 300px;
+    height: 150px;
+}
+th {
+    background-color: #B2AE95;
+}
+table {
+    /*table-layout: fixed;*/
+}
+td{
+    text-align: center;
+    font-family: Calibri;  
+    /*border-bottom:1pt solid black;*/
+}
+#main tr{
+    background-color:#FFFCEE;
+} 
