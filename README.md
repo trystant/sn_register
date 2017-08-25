@@ -70,4 +70,5 @@ Zend OPcache
 * Improve search with more than one categories.
 
 ## Author
-* Eugene Ko
+
+Eugene Ko
