@@ -5,8 +5,9 @@ __index.php__ is the main page where the user inserts company name, products and
 **info.php** contains the credential for MySQL database.
 ```
 
-## TODO
-* 
+## Things to do
+* Implement AJAX for nav and sql results
+* Improve search with more than one categories.
 
 ## Author
 * Eugene Ko
