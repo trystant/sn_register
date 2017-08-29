@@ -86,9 +86,9 @@ Zend OPcache
 
 ## Installation
 
-Copy files to root directory for web server(/var/www is default for ubuntu)
+Copy files to root directory for web server(/var/www is default for ubuntu).
 
-Import sn\_track.sql to mysql database.
+Import sn\_track.sql to empty mysql database and change info.php accordingly.
 
 ## Things to do
 * Implement AJAX for nav and sql results
