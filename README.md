@@ -27,7 +27,9 @@ A DB with three tables: **hdd**, **dvr**, **orders**, and **serial\_log**.
 
 ## Prerequisites
 
-**PHP7**
+ It was tested on Ubuntu 16.04.3 LTS, PHP 7.0.22, Apache 2.4.18, and MySQL 14.14 Distrib 5.17.19.
+
+**PHP7 Modules**
 
 [PHP Modules] 
 
@@ -80,8 +82,6 @@ zlib
 [Zend Modules]
 
 Zend OPcache
-
-**Apache**
 
 
 ## Installation
