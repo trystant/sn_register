@@ -12,11 +12,11 @@
 * **modify.php** records every modification.
 * **search.php** search with keyword or by date.
 * **search__query.php** contains search SQL and saves to session.
-
+* **sn\_track.sql** is a template for database in MySQL.
 
 **MySQL**
 
-A DB with three tables: **hdd**, **dvr**, **orders**, and **serial\_log**.
+sn\_track.sql has three main tables: **hdd**, **dvr**, **orders**, and **serial\_log**.
 
 *hdd* contains id, uid, hdd, and hdd\_serial.
 
