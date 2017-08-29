@@ -4,6 +4,8 @@
 
 ## Key files
 
+**PHP**
+
 * **index.php** is the main page where the user inserts company name, products and its serial numbers.
 * **info.php** contains the credential for MySQL database.
 * **query.php** inserts new entries.
@@ -11,9 +13,23 @@
 * **search.php** search with keyword or by date.
 * **search__query.php** contains search SQL and saves to session.
 
-## Pre-condition
 
-[PHP Modules]
+**MySQL**
+
+A DB with three tables: **hdd**, **dvr**, **orders**, and **serial\_log**.
+
+*hdd* contains id, uid, hdd, and hdd\_serial.
+
+*dvr* contains id, invoice, dvr\_model, dvr\_serial.
+
+*orders* contains id, invoice, company, year month, day and time.
+
+
+## Prerequisites
+
+**PHP7**
+
+[PHP Modules] 
 
 calendar
 Core
@@ -64,6 +80,15 @@ zlib
 [Zend Modules]
 
 Zend OPcache
+
+**Apache**
+
+
+## Installation
+
+Copy files to root directory for web server(/var/www is default for ubuntu)
+
+Import sn\_track.sql to mysql database.
 
 ## Things to do
 * Implement AJAX for nav and sql results
